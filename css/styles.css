@@ -307,13 +307,10 @@ nav ul {
 
 .socnetworks {
   display: flex;
+  justify-content: space-between;
 }
 
 .socnetworks-link {
-  height: 20px;
-}
-
-.socnetworks-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,17 +318,18 @@ nav ul {
   width: 44px;
   height: 44px;
 }
-
-.socnetworks-item:not(:last-child) {
-  margin-right: 10px;
+.social-icon {
+  fill: var(--color-company);
 }
 
-.socnetworks li:hover {
+.socnetworks-link:hover,
+.socnetworks-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
 }
 
-.socnetworks-item:hover .icon {
+.socnetworks-link:hover .social-icon,
+.socnetworks-link:focus .social-icon {
   fill: var(--white-color);
 }
 
@@ -355,11 +353,13 @@ nav ul {
 .logo-swg {
   fill: var(--color-company);
 }
-.customers-link:hover {
+.customers-link:hover,
+.customers-link:focus {
   border: 1px solid var(--accent-color);
 }
 
-.customers-link:hover .logo-swg {
+.customers-link:hover .logo-swg,
+.customers-link:focus .logo-swg {
   fill: var(--accent-color);
 }
 
@@ -418,6 +418,7 @@ address {
 }
 
 .footer .socnetworks-item {
+  margin-right: 10px;
   background-color: var(--background-icon);
   border-radius: 50%;
   color: var(--white-color);
